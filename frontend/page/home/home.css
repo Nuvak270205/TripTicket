@@ -107,6 +107,7 @@ input{
     font-size: 20px;
     color: black;
     background-color: white;
+    box-shadow: 8px 8px 16px rgba(0,0,0,0.2);
     z-index: 1000;
     border-radius: 16px;
     padding: 8px 0;
@@ -172,6 +173,7 @@ input{
     width: calc(25% - 12px);
     flex-shrink: 0;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .router__item-img{
@@ -192,6 +194,18 @@ input{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: black;
+}
+
+.item__body-name{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.item__body-price{
+    font-size: 14px;
+    opacity: 0.9;
+    margin-top: 4px;
 }
 
 .router__item-body1{

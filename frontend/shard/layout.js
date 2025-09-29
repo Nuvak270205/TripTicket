@@ -83,16 +83,29 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 const menuToggle = document.querySelector(".info__link .info");
                 const dropdownMenu = document.querySelector(".info__downdrop");
-                let isMenuVisible = false;
+                let timeOutInfo = null;
 
-                menuToggle.addEventListener("click", function() {
-                    dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+                menuToggle.addEventListener("mouseover", function() {
+                    clearTimeout(timeOutInfo);
+                    dropdownMenu.style.display = "block";
                 });
-                document.addEventListener("click", function(event) {
-                    if (!menuToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+
+                menuToggle.addEventListener("mouseleave", function() {
+                    timeOutInfo = setTimeout(() => {
                         dropdownMenu.style.display = "none";
-                    }
+                    }, 800);
                 });
+
+                dropdownMenu.addEventListener("mouseover", function() {
+                    clearTimeout(timeOutInfo);
+                });
+
+                dropdownMenu.addEventListener("mouseleave", function() {
+                    timeOutInfo = setTimeout(() => {
+                        dropdownMenu.style.display = "none";
+                    }, 800);
+                });
+
 
             } catch (error) {
                 console.error("Error rendering header:", error);

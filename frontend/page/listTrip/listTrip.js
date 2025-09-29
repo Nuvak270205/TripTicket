@@ -399,7 +399,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <div class="right__body-Notification">
                         </div>
                         <div class="right__body-listTrip">
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -445,7 +445,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -491,7 +491,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -583,7 +583,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -629,7 +629,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -675,7 +675,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -721,7 +721,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>

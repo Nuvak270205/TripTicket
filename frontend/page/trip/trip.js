@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', function() {
             function renderChairSteeringWheel() {
                 return `
                 <div class="bus__row-item">
-                    <img src="../../assets/image/steering-wheel(1).png" alt="Steering Wheel">
+                    <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/ekxrst8m7nu4c4acsfnm.png" alt="Steering Wheel">
                 </div>`;
             }
             function renderChairNormal(soGhe, giaVe, status) {
@@ -468,6 +468,14 @@ document.addEventListener('DOMContentLoaded', function() {
                             status: ghe.status
                         });
                     });
+                });
+                result.sort((a, b) => {
+                    let [letterA, numberA] = a.soGhe.match(/^([A-Z])+(\d+)$/).slice(1);
+                    let [letterB, numberB] = b.soGhe.match(/^([A-Z])+(\d+)$/).slice(1);
+                    if (letterA === letterB) {
+                        return numberA - numberB;
+                    }
+                    return letterA.localeCompare(letterB);
                 });
                 return result;
             }

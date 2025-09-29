@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     return;
                 }
                 dropdownTo.style.display = "none";
- });
+            });
             // gan gia tri vao input khi click vao item
             locationItemTo.forEach(function(item) {
                 item.addEventListener("click", function() {
@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             </div>
                             <div class="section2__content">
                                 <div class="router__list">
-                                    <div class="router__item">
+                                    <a href="../listTrip/index.html" class="router__item">
                                         <div class="router__item-img">
                                             <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="router 1">
                                         </div>
@@ -150,8 +150,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <span class="item__body-name">TPHCM - Vũng Tàu</span>
                                             <span class="item__body-price">Giá từ: 300.000 VND</span>
                                         </div>
-                                    </div>
-                                    <div class="router__item">
+                                    </a>
+                                    <a href="../listTrip/index.html" class="router__item">
                                         <div class="router__item-img">
                                             <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="router 1">
                                         </div>
@@ -159,8 +159,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <span class="item__body-name">TPHCM - Đà Lạt</span>
                                             <span class="item__body-price">Giá từ: 400.000 VND</span>
                                         </div>
-                                    </div>
-                                    <div class="router__item">
+                                    </a>
+                                    <a href="../listTrip/index.html" class="router__item">
                                         <div class="router__item-img">
                                             <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="router 1">
                                         </div>
@@ -168,8 +168,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <span class="item__body-name">TPHCM - Nha Trang</span>
                                             <span class="item__body-price">Giá từ: 500.000 VND</span>
                                         </div>
-                                    </div>
-                                    <div class="router__item">
+                                    </a>
+                                    <a href="../listTrip/index.html" class="router__item">
                                         <div class="router__item-img">
                                             <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="router 1">
                                         </div>
@@ -177,8 +177,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <span class="item__body-name">TPHCM - Nha Trang</span>
                                             <span class="item__body-price">Giá từ: 500.000 VND</span>
                                         </div>
-                                    </div>
-                                    <div class="router__item">
+                                    </a>
+                                    <a href="../listTrip/index.html" class="router__item">
                                         <div class="router__item-img">
                                             <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="router 1">
                                         </div>
@@ -186,8 +186,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <span class="item__body-name">TPHCM - Phú Quốc</span>
                                             <span class="item__body-price">Giá từ: 1.000.000 VND</span>
                                         </div>
-                                    </div>
-                                    <div class="router__item">
+                                    </a>
+                                    <a href="../listTrip/index.html" class="router__item">
                                         <div class="router__item-img">
                                             <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="router 1">
                                         </div>
@@ -195,8 +195,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <span class="item__body-name">TPHCM - Phú Quốc</span>
                                             <span class="item__body-price">Giá từ: 1.000.000 VND</span>
                                         </div>
-                                    </div>
-                                    <div class="router__item">
+                                    </a>
+                                    <a href="../listTrip/index.html" class="router__item">
                                         <div class="router__item-img">
                                             <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="router 1">
                                         </div>
@@ -204,8 +204,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <span class="item__body-name">TPHCM - Phú Quốc</span>
                                             <span class="item__body-price">Giá từ: 1.000.000 VND</span>
                                         </div>
-                                    </div>
-                                    <div class="router__item">
+                                    </a>
+                                    <a href="../listTrip/index.html" class="router__item">
                                         <div class="router__item-img">
                                             <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="router 1">
                                         </div>
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <span class="item__body-name">TPHCM - Phú Quốc</span>
                                             <span class="item__body-price">Giá từ: 1.000.000 VND</span>
                                         </div>
-                                    </div>
+                                    </a>
                                 </div>
                                 <div class="section2__btn section2__btn-left">
                                     <i class="fa-solid fa-chevron-left"></i>
@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <div class="section3__content">
                         <h1 class="section3__title">Chuyến đi nổi bật</h1>
                         <div class="section3__list">
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -369,7 +369,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -415,7 +415,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                     <div class="trip__item-notification">Không cần đặt cọc</div>
                                 </div>
                             </a>
-                            <a href="#" class="trip__item">
+                            <a href="../trip/index.html" class="trip__item">
                                 <div class="trip__item-img">
                                     <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/v3g5itqsqcigeuloqxa9.jpg" alt="Chuyến đi 1">
                                 </div>
@@ -810,7 +810,6 @@ document.addEventListener("DOMContentLoaded", function() {
             listItemNav.forEach(item => {
                 item.addEventListener("click", () => {
                     let itemId = item.getAttribute("id");
-                    console.log(itemId);
                     let contentId = itemId + "-content";
                     let contentItem = document.querySelector("#" + contentId);
                     if (!contentItem.classList.contains("active")){
@@ -823,30 +822,39 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
             });
-            listContentItem.forEach( item => {
-                const question = item.querySelectorAll(".content__item-question");
-                const answerArray = item.querySelectorAll(".content-item__answer");
-                question.forEach( q => {
-                    q.addEventListener("click", () => {
-                        const questionIcon = q.querySelector(".question__icon i");
-                        const questionIconMinus = document.querySelector(".question__icon i.fa-minus");
-                        if (questionIconMinus && questionIcon !== questionIconMinus){
-                            questionIconMinus.classList.remove("fa-minus");
-                            questionIconMinus.classList.add("fa-plus");
-                        }
-                       questionIcon.classList.toggle("fa-plus");
-                       questionIcon.classList.toggle("fa-minus");
+            listContentItem.forEach(item => {
+                const questions = item.querySelectorAll(".content__item-question");
 
-                        answerArray.forEach( a => {
-                            if (a !== q.querySelector(".content-item__answer")){
-                                a.classList.remove("active");
+                questions.forEach(q => {
+                    q.addEventListener("click", (e) => {
+                        const currentAnswer = q.querySelector(".content-item__answer");
+                        const currentIcon = q.querySelector(".question__icon i");
+                        const activeAnswer = item.querySelector(".content-item__answer.active");
+
+                        if (activeAnswer && activeAnswer !== currentAnswer) {
+                            const activeIcon = item.querySelector(".question__icon i.fa-minus");
+                            if (activeAnswer) {
+                                activeAnswer.classList.remove("active");
                             }
-                        });
-                        const answer = q.querySelector(".content-item__answer");
-                        answer.classList.toggle("active");
+                            if (activeIcon) {
+                                activeIcon.classList.remove("fa-minus");
+                                activeIcon.classList.add("fa-plus");
+                            }
+                        }
+
+                        currentAnswer.classList.toggle("active");
+
+                        if (currentAnswer.classList.contains("active")) {
+                            currentIcon.classList.remove("fa-plus");
+                            currentIcon.classList.add("fa-minus");
+                        } else {
+                            currentIcon.classList.remove("fa-minus");
+                            currentIcon.classList.add("fa-plus");
+                        }
                     });
                 });
             });
+
         }else{
             console.error("Section 6 element not found");
         }
