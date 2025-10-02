@@ -779,7 +779,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const section1 = document.querySelector('.section1');
             const sideLeft = document.querySelector('.section2__left');
             let height = window.innerHeight;
-            let maxHeight = height - 120;
+            let maxHeight = height - header.scrollHeight - 50 ;
 
 
             function adjustSideLeftPosition() {

@@ -836,7 +836,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             if (activeAnswer) {
                                 activeAnswer.classList.remove("active");
                             }
-                            if (activeIcon) {
+                            if (activeIcon) { 
                                 activeIcon.classList.remove("fa-minus");
                                 activeIcon.classList.add("fa-plus");
                             }
