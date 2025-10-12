@@ -824,8 +824,6 @@ document.addEventListener("DOMContentLoaded", function() {
                             maxRange.value = minVal + minGap;
                         }
                     }
-                    minVal = parseFloat(minRange.value);
-                    maxVal = parseFloat(maxRange.value);
                 }
                 if(Number.isInteger(minVal)){
                     fromHour.textContent = minVal + ":00";

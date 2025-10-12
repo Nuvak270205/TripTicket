@@ -513,6 +513,9 @@ input{
     border-radius: 16px;
     border: 1px solid #ddd;
 }
+.content__item-question.active{
+    background-color: #f0f0f0;
+}
 
 .question__icon i{
     font-size: 18px;

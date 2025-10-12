@@ -830,6 +830,11 @@ document.addEventListener("DOMContentLoaded", function() {
                         const currentAnswer = q.querySelector(".content-item__answer");
                         const currentIcon = q.querySelector(".question__icon i");
                         const activeAnswer = item.querySelector(".content-item__answer.active");
+                        const activeQuestion = item.querySelector(".content__item-question.active");
+
+                        if (activeQuestion && activeQuestion !== q) {
+                            activeQuestion.classList.remove("active");
+                        }
 
                         if (activeAnswer && activeAnswer !== currentAnswer) {
                             const activeIcon = item.querySelector(".question__icon i.fa-minus");
@@ -843,6 +848,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         }
 
                         currentAnswer.classList.toggle("active");
+                        q.classList.toggle("active");
 
                         if (currentAnswer.classList.contains("active")) {
                             currentIcon.classList.remove("fa-plus");
