@@ -16,6 +16,11 @@ ul, li{
     list-style: none;
     margin: 0;
 }
+
+.nav__list{
+    margin: 0;
+}
+
 :root{
     --primary-color: #228B22;
     --secondary-color: #FF5722;
