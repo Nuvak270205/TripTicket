@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function() {
-    
+document.addEventListener("DOMContentLoaded", function () {
+
     // Header
     function renderHeader() {
         const header = document.querySelector(".header");
@@ -38,9 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
                                             <div class="info">
                                                 <img src="" alt="" class="info__image">
                                             </div>
-                                            <button class="info__button">
-                                                Đăng nhập
-                                            </button>
+                                            <a href="../login/index.html" class="info__button ${activePage === 'login' ? 'active' : ''}">
+                                             Đăng nhập
+                                            </a>
+
                                         </div>
                                         <div class="info__downdrop">
                                             <ul class="info__list">
@@ -77,30 +78,30 @@ document.addEventListener("DOMContentLoaded", function() {
                         </div>
                     </div>
                     `;
-        if (header){
+        if (header) {
             try {
-                header.innerHTML =  htmlheader;
+                header.innerHTML = htmlheader;
 
                 const menuToggle = document.querySelector(".info__link .info");
                 const dropdownMenu = document.querySelector(".info__downdrop");
                 let timeOutInfo = null;
 
-                menuToggle.addEventListener("mouseover", function() {
+                menuToggle.addEventListener("mouseover", function () {
                     clearTimeout(timeOutInfo);
                     dropdownMenu.style.display = "block";
                 });
 
-                menuToggle.addEventListener("mouseleave", function() {
+                menuToggle.addEventListener("mouseleave", function () {
                     timeOutInfo = setTimeout(() => {
                         dropdownMenu.style.display = "none";
                     }, 800);
                 });
 
-                dropdownMenu.addEventListener("mouseover", function() {
+                dropdownMenu.addEventListener("mouseover", function () {
                     clearTimeout(timeOutInfo);
                 });
 
-                dropdownMenu.addEventListener("mouseleave", function() {
+                dropdownMenu.addEventListener("mouseleave", function () {
                     timeOutInfo = setTimeout(() => {
                         dropdownMenu.style.display = "none";
                     }, 800);
@@ -177,9 +178,9 @@ document.addEventListener("DOMContentLoaded", function() {
                             <p>Số Giấy chứng nhận đăng ký doanh nghiệp: 0317772069 được cấp bởi Sở Kế hoạch đầu tư TP. HCM lần đầu ngày 4/6</p>
                         </div>
                 </div>`;
-        if (footer){
+        if (footer) {
             try {
-                footer.innerHTML =  htmlfooter;
+                footer.innerHTML = htmlfooter;
             } catch (error) {
                 console.error("Error rendering footer:", error);
             }
