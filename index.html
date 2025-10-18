@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Đỗ Thành Duy">
+    <meta name="description" content="TripTicket - Trang cá nhân người dùng">
+    
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="TripTicket - Trang cá nhân">
+    <meta property="og:description" content="Quản lý thông tin cá nhân và lịch sử đặt vé với TripTicket.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tripticket.com/profile">
+    <meta property="og:image" content="https://tripticket.com/assets/images/og-image.jpg">
+    <meta property="og:author" content="Đỗ Thành Duy">
+    
+    <link rel="icon" type="image/x-icon" href="">
+    <title>Profile - TripTicket</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <!-- Nội dung header giống trang chủ -->
+    </header>
+    <!-- End Header Section -->
+
+    <!-- Profile Section -->
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile__content">
+                <!-- Profile Header -->
+                <div class="profile__header">
+                    <div class="profile__avatar">
+                        <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/xlkcdtmjgsbiuglsiekp.jpg" alt="Avatar">
+                    </div>
+                    <div class="profile__info">
+                        <h2>Đỗ Thành Duy</h2>
+                        <p>thanhduy@example.com</p>
+                        <p>+84 123 456 789</p>
+                    </div>
+                    <button class="btn-edit-profile">Chỉnh sửa thông tin</button>
+                </div>
+
+                <!-- Profile Tabs -->
+                <div class="profile__tabs">
+                    <div class="tab-item active" data-tab="history">Lịch sử đặt vé</div>
+                    <div class="tab-item" data-tab="settings">Cài đặt tài khoản</div>
+                </div>
+
+                <!-- Profile Content -->
+                <div class="profile__tab-content">
+                    <!-- Tab: Lịch sử đặt vé -->
+                    <div class="tab-content active" id="history">
+                        <h3>Lịch sử đặt vé</h3>
+                        <div class="history__list">
+                            <div class="history__item">
+                                <div class="history__item-info">
+                                    <h4>Hà Nội → Đà Nẵng</h4>
+                                    <p>Ngày: 15/10/2025</p>
+                                    <p>Trạng thái: Đã hoàn thành</p>
+                                    <p>Giá: 500,000 VNĐ</p>
+                                </div>
+                                <button class="btn-view-details">Xem chi tiết</button>
+                            </div>
+                            <div class="history__item">
+                                <div class="history__item-info">
+                                    <h4>Sài Gòn → Nha Trang</h4>
+                                    <p>Ngày: 10/10/2025</p>
+                                    <p>Trạng thái: Đang chờ</p>
+                                    <p>Giá: 350,000 VNĐ</p>
+                                </div>
+                                <button class="btn-view-details">Xem chi tiết</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Cài đặt tài khoản -->
+                    <div class="tab-content" id="settings">
+                        <h3>Cài đặt tài khoản</h3>
+                        <form class="settings__form">
+                            <div class="form__group">
+                                <label for="fullName">Họ và tên</label>
+                                <input type="text" id="fullName" value="Đỗ Thành Duy">
+                            </div>
+                            <div class="form__group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" value="thanhduy@example.com">
+                            </div>
+                            <div class="form__group">
+                                <label for="phone">Số điện thoại</label>
+                                <input type="tel" id="phone" value="+84 123 456 789">
+                            </div>
+                            <div class="form__group">
+                                <label for="address">Địa chỉ</label>
+                                <input type="text" id="address" value="12 Lê Lợi, P. Gò Vấp, TP. HCM">
+                            </div>
+                            <div class="form__group">
+                                <label for="password">Mật khẩu mới</label>
+                                <input type="password" id="password" placeholder="Nhập mật khẩu mới">
+                            </div>
+                            <button type="submit" class="btn-save">Lưu thay đổi</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Profile Section -->
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Nội dung footer giống trang chủ -->
+    </footer>
+    <!-- End Footer Section -->
+
+    <script src="layout.js"></script>
+    <script src="profile.js"></script>
+</body>
+</html>
