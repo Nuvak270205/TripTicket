@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nguyễn Thái Dương">
+    <meta name="description" content="TripTicket - Hoàn tất thanh toán và giữ chỗ an toàn cho chuyến đi của bạn.">
+    <meta property="og:title" content="TripTicket Payment">
+    <meta property="og:description" content="Thanh toán an toàn trên TripTicket với nhiều phương thức linh hoạt.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tripticket.com/payment">
+    <meta property="og:image" content="https://res.cloudinary.com/dpnza0kof/image/upload/v1758800396/f6cwh6qzhvztvyrr0ano.png">
+    <meta property="og:author" content="Nguyễn Thái Dương">
+
+    <link rel="icon" type="image/x-icon" href="">
+    <title>Thanh toán</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../shard/global.css">
+    <link rel="stylesheet" href="./payment.css">
+</head>
+<body>
+    <header class="header"></header>
+
+    <main class="payment">
+        <section class="payment-steps">
+            <div class="container payment-steps__layout">
+                <div class="payment-steps__info">
+                    <p class="payment-steps__eyebrow">Hoàn tất đặt vé</p>
+                    <h1>Thanh toán bảo đảm với TripTicket</h1>
+                    <p>Bạn còn <span id="paymentCountdown" class="payment-steps__countdown">10:00</span> để giữ chỗ. Vui lòng kiểm tra thông tin trước khi thanh toán.</p>
+                </div>
+                <ol class="payment-steps__list" aria-label="Tiến trình đặt vé">
+                    <li class="payment-steps__item is-done">
+                        <span class="payment-steps__number"><i class="fa-solid fa-check"></i></span>
+                        <div>
+                            <h3>Chọn chuyến</h3>
+                            <p>Đã xác nhận chuyến đi và ghế ngồi.</p>
+                        </div>
+                    </li>
+                    <li class="payment-steps__item is-done">
+                        <span class="payment-steps__number"><i class="fa-solid fa-check"></i></span>
+                        <div>
+                            <h3>Thông tin hành khách</h3>
+                            <p>Họ tên và liên hệ đã lưu.</p>
+                        </div>
+                    </li>
+                    <li class="payment-steps__item is-current">
+                        <span class="payment-steps__number">3</span>
+                        <div>
+                            <h3>Thanh toán</h3>
+                            <p>Chọn phương thức và hoàn tất.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="payment-content" aria-labelledby="paymentTitle">
+            <div class="container payment-content__grid">
+                <div class="payment-form" id="paymentTitle">
+                    <section class="payment-card">
+                        <header class="payment-card__header">
+                            <h2>Thông tin người nhận vé</h2>
+                            <button type="button" class="payment-card__change" id="editContactButton">Chỉnh sửa</button>
+                        </header>
+                        <div class="payment-card__body">
+                            <div class="payment-contact">
+                                <div>
+                                    <p class="payment-contact__label">Họ và tên</p>
+                                    <p class="payment-contact__value" id="contactName">Nguyễn Văn A</p>
+                                </div>
+                                <div>
+                                    <p class="payment-contact__label">Email</p>
+                                    <p class="payment-contact__value" id="contactEmail">vana@example.com</p>
+                                </div>
+                                <div>
+                                    <p class="payment-contact__label">Số điện thoại</p>
+                                    <p class="payment-contact__value" id="contactPhone">0966 123 456</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="payment-card">
+                        <header class="payment-card__header">
+                            <h2>Phương thức thanh toán</h2>
+                            <p class="payment-card__hint">TripTicket mã hóa thông tin và không lưu thẻ của bạn.</p>
+                        </header>
+                        <div class="payment-methods" role="radiogroup" aria-label="Chọn phương thức thanh toán">
+                            <button type="button" class="payment-method is-active" data-method="vnpay">
+                                <div class="payment-method__icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1v7T287-ikP1m7dEUbs2n1SbbLEqkMd1ZA&s" alt="VNPay"></div>
+                                <div>
+                                    <h3>VNPay QR</h3>
+                                    <p>Quét mã với ứng dụng ngân hàng, miễn phí phí giao dịch.</p>
+                                </div>
+                                <span class="payment-method__check"><i class="fa-solid fa-circle-check"></i></span>
+                            </button>
+                            <button type="button" class="payment-method" data-method="momo">
+                                <div class="payment-method__icon"><img src="https://blog.pay2s.vn/wp-content/uploads/2024/11/momo_icon_square_pinkbg_RGB-300x300.png" alt="MoMo"></div>
+                                <div>
+                                    <h3>MoMo</h3>
+                                    <p>Thanh toán ví điện tử, nhận hoàn tiền 20.000đ cho người mới.</p>
+                                </div>
+                                <span class="payment-method__check"><i class="fa-solid fa-circle-check"></i></span>
+                            </button>
+                            <button type="button" class="payment-method" data-method="card">
+                                <div class="payment-method__icon"><i class="fa-regular fa-credit-card"></i></div>
+                                <div>
+                                    <h3>Thẻ quốc tế/ATM</h3>
+                                    <p>Hỗ trợ Visa, MasterCard, JCB, Napas.</p>
+                                </div>
+                                <span class="payment-method__check"><i class="fa-solid fa-circle-check"></i></span>
+                            </button>
+                            <button type="button" class="payment-method" data-method="office">
+                                <div class="payment-method__icon"><i class="fa-solid fa-building"></i></div>
+                                <div>
+                                    <h3>Thanh toán tại văn phòng</h3>
+                                    <p>Giữ vé đến 12h trước giờ chạy, áp dụng tại TP.HCM.</p>
+                                </div>
+                                <span class="payment-method__check"><i class="fa-solid fa-circle-check"></i></span>
+                            </button>
+                        </div>
+                        <div class="payment-instruction" id="paymentInstruction" aria-live="polite"></div>
+
+                        <form class="payment-card__body payment-card__body--form" id="cardForm" hidden>
+                            <div class="form-group">
+                                <label for="cardNumber">Số thẻ *</label>
+                                <input type="text" id="cardNumber" name="cardNumber" inputmode="numeric" placeholder="#### #### #### ####" autocomplete="cc-number">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="cardName">Tên in trên thẻ *</label>
+                                    <input type="text" id="cardName" name="cardName" placeholder="NGUYEN VAN A" autocomplete="cc-name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardExpiry">Ngày hết hạn *</label>
+                                    <input type="text" id="cardExpiry" name="cardExpiry" inputmode="numeric" placeholder="MM/YY" autocomplete="cc-exp">
+                                </div>
+                                <div class="form-group">
+                                    <label for="cardCvv">Mã CVV *</label>
+                                    <input type="password" id="cardCvv" name="cardCvv" inputmode="numeric" placeholder="***" maxlength="4" autocomplete="cc-csc">
+                                </div>
+                            </div>
+                            <p class="payment-card__secure"><i class="fa-solid fa-lock"></i> Bảo mật PCI DSS cấp độ 1.</p>
+                        </form>
+                    </section>
+
+                    <section class="payment-card">
+                        <header class="payment-card__header">
+                            <h2>Mã ưu đãi</h2>
+                        </header>
+                        <div class="payment-card__body payment-coupon">
+                            <div class="payment-coupon__input">
+                                <input type="text" id="couponInput" placeholder="Nhập mã ưu đãi">
+                                <button type="button" id="applyCouponButton">Áp dụng</button>
+                            </div>
+                            <p class="payment-coupon__hint">Tặng thêm 15.000đ khi thanh toán qua VNPay với mã <code>TRIPVNPAY</code>.</p>
+                            <p class="payment-coupon__status" id="couponStatus" aria-live="polite"></p>
+                        </div>
+                    </section>
+
+                    <section class="payment-card">
+                        <header class="payment-card__header">
+                            <h2>Điều khoản</h2>
+                        </header>
+                        <div class="payment-card__body payment-policy">
+                            <label class="payment-policy__checkbox">
+                                <input type="checkbox" id="policyCheckbox">
+                                <span>Tôi đồng ý với <a href="#">điều khoản sử dụng</a> và <a href="#">chính sách hủy vé</a> của TripTicket.</span>
+                            </label>
+                            <button type="button" class="payment-submit" id="confirmPaymentButton">Thanh toán &amp; giữ chỗ</button>
+                            <p class="payment-card__secure payment-card__secure--center"><i class="fa-solid fa-shield-heart"></i> Bảo hiểm chuyến đi trị giá 50.000.000đ đã được kích hoạt.</p>
+                            <p class="payment-card__notice" id="paymentNotice" aria-live="polite"></p>
+                        </div>
+                    </section>
+                </div>
+
+                <aside class="payment-summary" aria-label="Tóm tắt đặt chỗ">
+                    <section class="summary-card">
+                        <header class="summary-card__header">
+                            <h2>Chuyến đi của bạn</h2>
+                            <button type="button" class="summary-card__change" id="changeTripButton">Đổi chuyến</button>
+                        </header>
+                        <div class="summary-card__body">
+                            <div class="summary-trip">
+                                <div class="summary-trip__time">
+                                    <p class="summary-trip__date">Thứ 6, 24/10/2025</p>
+                                    <div class="summary-trip__timeline">
+                                        <span>20:30</span>
+                                        <span class="summary-trip__dot"></span>
+                                        <span>06:10</span>
+                                    </div>
+                                </div>
+                                <div class="summary-trip__route">
+                                    <h3>TP.HCM → Đà Lạt</h3>
+                                    <p>Nhà xe Tân Quang Dũng · Ghế Limousine</p>
+                                    <p>Đón: 283 Phạm Ngũ Lão, Q1 · Trả: Bến xe Đà Lạt</p>
+                                </div>
+                            </div>
+                            <ul class="summary-passengers">
+                                <li>
+                                    <span>Hành khách 1</span>
+                                    <span>Nguyễn Văn A · Ghế 05A</span>
+                                </li>
+                                <li>
+                                    <span>Hành khách 2</span>
+                                    <span>Trần Thị B · Ghế 05B</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section class="summary-card">
+                        <header class="summary-card__header">
+                            <h2>Chi tiết thanh toán</h2>
+                        </header>
+                        <div class="summary-card__body summary-pricing">
+                            <div class="summary-pricing__row">
+                                <span>Giá vé (2)</span>
+                                <span id="baseFare">720.000đ</span>
+                            </div>
+                            <div class="summary-pricing__row">
+                                <span>Phí thanh toán</span>
+                                <span id="serviceFee">0đ</span>
+                            </div>
+                            <div class="summary-pricing__row">
+                                <span>Giảm giá</span>
+                                <span id="discountAmount">-0đ</span>
+                            </div>
+                            <hr>
+                            <div class="summary-pricing__total">
+                                <span>Tổng thanh toán</span>
+                                <span id="totalAmount">720.000đ</span>
+                            </div>
+                            <p class="summary-pricing__note" id="pricingNote">Đã bao gồm VAT và bảo hiểm chuyến đi.</p>
+                        </div>
+                    </section>
+
+                    <section class="summary-card summary-safe">
+                        <div class="summary-safe__item">
+                            <i class="fa-solid fa-shield"></i>
+                            <div>
+                                <h3>Đảm bảo hoàn tiền 100%</h3>
+                                <p>Hoàn tiền trong 24h nếu chuyến bị hủy bởi nhà xe.</p>
+                            </div>
+                        </div>
+                        <div class="summary-safe__item">
+                            <i class="fa-solid fa-headset"></i>
+                            <div>
+                                <h3>Hỗ trợ 24/7</h3>
+                                <p>Gọi 1900 989 901 hoặc chat trực tiếp với tư vấn viên.</p>
+                            </div>
+                        </div>
+                        <div class="summary-safe__item">
+                            <i class="fa-solid fa-receipt"></i>
+                            <div>
+                                <h3>Hóa đơn điện tử</h3>
+                                <p>Gửi ngay sau khi thanh toán thành công.</p>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="../../shard/layout.js"></script>
+    <script src="./payment.js"></script>
+</body>
+</html>

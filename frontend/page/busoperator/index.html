@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
-</html>
-
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,86 +20,31 @@
     <link rel="stylesheet" href="../../shard/global.css">
     <link rel="stylesheet" href="./busoperator.css">
 </head>
-
 <body>
-    <!-- Header -->
-    <header class="header">
+    <header class="header"></header>
 
-    </header>
-    <!-- End Header -->
-
-    <!-- <section class="section1">
-        
-    </section> -->
     <div class="container">
         <main class="bus-operator">
-        <h2>Danh sách nhà xe</h2>
+            <h2>Danh sách nhà xe</h2>
 
-        <!-- Thanh tìm kiếm -->
-        <div class="search-box">
-            <input type="text" placeholder="Tìm kiếm nhà xe..." />
-            <button>Tìm</button>
-        </div>
-
-        <!-- Danh sách nhà xe -->
-        <div class="bus-list">
-            <div class="bus-card">
-                <img src="https://play-lh.googleusercontent.com/JUa-enpuJgavR6i_kD8fEwUicF4yLHyy5JPvf5nn3us8c6DyNU4R5EA31X5eo2TcLFQ=w240-h480-rw"
-                    alt="Xe An Phát" />
-                <div class="bus-info">
-                    <h3>Nhà xe Tân Quang Dũng</h3>
-                    <p><strong>Điểm đi:</strong> TP.HCM</p>
-                    <p><strong>Điểm đến:</strong> Hà Nội</p>
-                    <p><strong>Số điện thoại:</strong> 0912 345 678</p>
-                    <button>Xem chi tiết</button>
-                </div>
+            <div class="search-box">
+                <input type="text" id="busSearchInput" placeholder="Tìm kiếm nhà xe..." aria-label="Tìm kiếm nhà xe" />
+                <button type="button" id="busSearchButton">Tìm</button>
             </div>
 
-            <div class="bus-card">
-                <img src="https://storage.googleapis.com/futa-busline-web-cms-prod/MOMO_599_337_px_1198_674_px_1_c5785a23b4/MOMO_599_337_px_1198_674_px_1_c5785a23b4.png"
-                    alt="Xe Phương Trang" />
-                <div class="bus-info">
-                    <h3>Nhà xe Phương Trang</h3>
-                    <p><strong>Điểm đi:</strong> Đà Nẵng</p>
-                    <p><strong>Điểm đến:</strong> Nha Trang</p>
-                    <p><strong>Số điện thoại:</strong> 0909 888 999</p>
-                    <button>Xem chi tiết</button>
-                </div>
+            <div class="bus-list" id="busList">
+                <p class="bus-list__empty">Đang tải danh sách nhà xe...</p>
             </div>
-
-            <div class="bus-card">
-                <img src="https://xeminhphuong.com/wp-content/uploads/2024/08/minhphuong.png" alt="Xe Minh Phương" />
-                <div class="bus-info">
-                    <h3>Nhà xe Minh Phương</h3>
-                    <p><strong>Điểm đi:</strong>TPHCM</p>
-                    <p><strong>Điểm đến:</strong>Đà nẵng</p>
-                    <p><strong>Số điện thoại:</strong> 0909 888 999</p>
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-            <div class="bus-card">
-                <img src="https://nhaxecamvan.com/wp-content/uploads/2025/01/CAM-VAN-2.jpg" alt="Xe Cẩm vân" />
-                <div class="bus-info">
-                    <h3>Nhà xe Cẩm vân</h3>
-                    <p><strong>Điểm đi:</strong>TPHCM</p>
-                    <p><strong>Điểm đến:</strong>Lâm Đồng</p>
-                    <p><strong>Số điện thoại:</strong> 0909 888 999</p>
-                    <button>Xem chi tiết</button>
-                </div>
-            </div>
-
-            <!-- Thêm các nhà xe khác tương tự -->
-        </div>
-    </main>
+        </main>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer"></footer>
 
-    </footer>
-    <!-- End Footer -->
+    <noscript>
+        <p class="bus-operator__noscript">Vui lòng bật JavaScript để xem chi tiết phản hồi của từng nhà xe.</p>
+    </noscript>
 
     <script src="../../shard/layout.js"></script>
+    <script src="./busoperator.js"></script>
 </body>
-
 </html>

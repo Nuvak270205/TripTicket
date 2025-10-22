@@ -33,6 +33,13 @@ document.addEventListener("DOMContentLoaded", function () {
                                             Hỗ trợ
                                         </a>
                                     </li>
+
+                                    <li class="nav__item">
+                                        <a href="../feedback/index.html" class="nav__link ${activePage === 'feedback' ? 'active' : ''}">
+                                            <i class="fa-solid fa-comment-dots"></i>
+                                            Feedback
+                                        </a>
+                                    </li>
                                     <li class="nav__item info__link">
                                         <div class="nav__link">
                                             <div class="info">
