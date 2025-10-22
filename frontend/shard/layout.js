@@ -14,7 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="header__menu">
                             <nav class="nav">
                                 <ul class="nav__list">
-                                    <li class="nav__item"><a href="../home/index.html" class="nav__link ${activePage === 'home' ? 'active' : ''}">Trang chủ</a></li>
+                                    <li class="nav__item">
+                                        <a href="../home/index.html" class="nav__link ${activePage === 'home' ? 'active' : ''}">
+                                            <i class="fa-solid fa-house"></i>
+                                            Trang chủ
+                                        </a>
+                                    </li>
                                     <li class="nav__item">
                                         <a href="../busoperator/index.html" class="nav__link ${activePage === 'busoperator' ? 'active' : ''}">
                                             <i class="fa-solid fa-bus"></i>
