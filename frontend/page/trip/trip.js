@@ -710,44 +710,48 @@ document.addEventListener('DOMContentLoaded', function() {
                         priceTotal.textContent = totalPrice.toLocaleString('vi-VN') + ' VND';
                     });
                 });
+
+                btn.addEventListener('click', () => {
+                    location.href = `../payment/index.html`;
+                });
             
-                const newBtn = btn.cloneNode(true);
-                btn.parentNode.replaceChild(newBtn, btn);
+                // const newBtn = btn.cloneNode(true);
+                // btn.parentNode.replaceChild(newBtn, btn);
 
-                newBtn.addEventListener('click', () => {
-                    const choosingSeats = [...document.querySelectorAll('.bus__row-item .chair--choosing')];
-                    if (choosingSeats.length === 0) {
-                        new bootstrap.Modal(document.getElementById('warningModal')).show();
-                        return;
-                    }
-                    document.getElementById('modal-seats').textContent = choosingSeats.map(c => c.dataset.key).join(', ');                        
-                    document.getElementById('modal-total').textContent = choosingSeats.reduce((acc, c) => acc + Number(c.dataset.price || 0), 0).toLocaleString('vi-VN') + ' VND';
-                    new bootstrap.Modal(document.getElementById('bookingModal')).show();
-                });
+                // newBtn.addEventListener('click', () => {
+                //     const choosingSeats = [...document.querySelectorAll('.bus__row-item .chair--choosing')];
+                //     if (choosingSeats.length === 0) {
+                //         new bootstrap.Modal(document.getElementById('warningModal')).show();
+                //         return;
+                //     }
+                //     document.getElementById('modal-seats').textContent = choosingSeats.map(c => c.dataset.key).join(', ');                        
+                //     document.getElementById('modal-total').textContent = choosingSeats.reduce((acc, c) => acc + Number(c.dataset.price || 0), 0).toLocaleString('vi-VN') + ' VND';
+                //     new bootstrap.Modal(document.getElementById('bookingModal')).show();
+                // });
 
-                // Nút xác nhận
-                const confirmBtn = document.getElementById('confirmBooking');
-                const newConfirmBtn = confirmBtn.cloneNode(true);
-                confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
-                newConfirmBtn.addEventListener('click', () => {
-                    const choosingSeats = [...document.querySelectorAll('.bus__row-item .chair--choosing')]
-                        .map(c => c.dataset.key);
+                // // Nút xác nhận
+                // const confirmBtn = document.getElementById('confirmBooking');
+                // const newConfirmBtn = confirmBtn.cloneNode(true);
+                // confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
+                // newConfirmBtn.addEventListener('click', () => {
+                //     const choosingSeats = [...document.querySelectorAll('.bus__row-item .chair--choosing')]
+                //         .map(c => c.dataset.key);
 
-                    if (choosingSeats.length > 0) {
-                        // Cập nhật status trong data
-                        data.forEach(chair => {
-                            if (choosingSeats.includes(chair.soGhe)) {
-                                chair.status = 'booked';
-                            }
-                        });
-                        alert("Đặt vé thành công ✅");
-                        // Cập nhật lại busLayout với data mới
-                        busLayout = BusLayout(data);
-                        renderBusLayout(busLayout);
-                        document.querySelector('.payment__total-value').textContent = '0 VND';
-                        bootstrap.Modal.getInstance(document.getElementById('bookingModal')).hide();
-                    }
-                });
+                //     if (choosingSeats.length > 0) {
+                //         // Cập nhật status trong data
+                //         data.forEach(chair => {
+                //             if (choosingSeats.includes(chair.soGhe)) {
+                //                 chair.status = 'booked';
+                //             }
+                //         });
+                //         alert("Đặt vé thành công ✅");
+                //         // Cập nhật lại busLayout với data mới
+                //         busLayout = BusLayout(data);
+                //         renderBusLayout(busLayout);
+                //         document.querySelector('.payment__total-value').textContent = '0 VND';
+                //         bootstrap.Modal.getInstance(document.getElementById('bookingModal')).hide();
+                //     }
+                // });
             }
             renderBusLayout(busLayout);       
         } else {

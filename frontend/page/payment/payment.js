@@ -242,7 +242,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 confirmPaymentButton.classList.remove("is-loading");
                 confirmPaymentButton.textContent = "Thanh toán & giữ chỗ";
                 showPaymentNotice("Thanh toán thành công! Vé và hóa đơn đã được gửi đến email của bạn.", true);
-            }, 1800);
+                setTimeout(function () {
+                    location.href = "../home/index.html";
+                }, 1800);
+            }, 2500);
         });
     }
 

@@ -28,13 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
                                         </a>
                                     </li>
                                     <li class="nav__item">
-                                        <a href="../contact/index.html" class="nav__link ${activePage === 'contact' ? 'active' : ''}">
-                                            <i class="fa-solid fa-phone"></i>
-                                            Hỗ trợ
-                                        </a>
-                                    </li>
-
-                                    <li class="nav__item">
                                         <a href="../feedback/index.html" class="nav__link ${activePage === 'feedback' ? 'active' : ''}">
                                             <i class="fa-solid fa-comment-dots"></i>
                                             Feedback
