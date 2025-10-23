@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Nguyễn Thái Dương">
+    <meta name="description" content="TripTicket - Cổng thông tin và đặt vé trực tuyến"> 
+    <!-- Open Graph Metadata (hiện preview khi share link lên MXH) -->
+    <meta property="og:title" content="TripTicket">
+    <meta property="og:description" content="Khám phá những điểm đến tuyệt vời với TripTicket.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tripticket.com">
+    <meta property="og:image" content="https://tripticket.com/assets/images/og-image.jpg"> 
+    <meta property="og:author" content="Nguyễn Thái Dương"> 
+    
+    <link rel="icon" type="image/x-icon" href="">
+    <title>Hủy vé</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../../shard/global.css">
+    <link rel="stylesheet" href="./cancel.css">
+</head>
+<body>
+    <header class="header"></header>
+
+    <main class="cancel">
+        <section class="cancel-hero">
+            <div class="container cancel-hero__layout">
+                <div class="cancel-hero__info">
+                    <p class="cancel-hero__eyebrow">Quản lý đặt vé</p>
+                    <h1>Hủy vé nhanh chóng và minh bạch</h1>
+                    <p>Nhập mã đặt vé cùng thông tin liên hệ để kiểm tra trạng thái, phí hủy và yêu cầu hoàn tiền. TripTicket sẽ xác nhận qua email trong vòng 30 phút.</p>
+                    <ul class="cancel-hero__highlights">
+                        <li><i class="fa-solid fa-shield-halved"></i> Hoàn tiền 100% nếu nhà xe hủy chuyến</li>
+                        <li><i class="fa-solid fa-clock-rotate-left"></i> Xử lý yêu cầu trong 4 giờ làm việc</li>
+                        <li><i class="fa-solid fa-comments"></i> Hỗ trợ 24/7 qua hotline 1900 989 901</li>
+                    </ul>
+                </div>
+               
+            </div>
+        </section>
+
+        <section class="cancel-section" id="cancelSection" aria-labelledby="cancelTitle">
+            <div class="container">
+                <header class="cancel-section__header">
+                    <h2 id="cancelTitle">Hủy vé của bạn</h2>
+                    <p>Điền thông tin chính xác để tìm vé đã đặt. Mỗi yêu cầu có thể áp dụng phí theo chính sách của nhà xe.</p>
+                </header>
+
+                <form class="cancel-form" id="cancelLookupForm" novalidate>
+                    <div class="cancel-form__group">
+                        <label for="bookingCode">Mã đặt vé *</label>
+                        <input type="text" id="bookingCode" name="bookingCode" placeholder="VD: TT-241010" required>
+                    </div>
+                    <div class="cancel-form__group">
+                        <label for="contactValue">Email hoặc số điện thoại *</label>
+                        <input type="text" id="contactValue" name="contactValue" placeholder="VD: vana@example.com hoặc 0966123456" required>
+                    </div>
+                    <div class="cancel-form__group cancel-form__group--submit">
+                        <button type="submit" class="cancel-form__submit">Kiểm tra vé</button>
+                    </div>
+                    <p class="cancel-form__notice" id="cancelFormNotice" aria-live="polite"></p>
+                </form>
+
+                <div class="cancel-result" id="cancelResult" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="cancel-policy" aria-labelledby="policyTitle">
+            <div class="container cancel-policy__grid">
+                <div>
+                    <h2 id="policyTitle">Chính sách hoàn hủy</h2>
+                    <ul class="cancel-policy__list">
+                        <li><strong>Trước 48h:</strong> Hoàn 95% giá vé.</li>
+                        <li><strong>24h - 48h:</strong> Hoàn 85% giá vé.</li>
+                        <li><strong>Dưới 24h:</strong> Hoàn 50% giá vé.</li>
+                        <li><strong>Dưới 6h:</strong> Không hoàn tiền, vui lòng liên hệ hotline để hỗ trợ.</li>
+                    </ul>
+                </div>
+                <div class="cancel-policy__note">
+                    <h3>Cần hỗ trợ thêm?</h3>
+                    <p>Liên hệ hotline <strong>1900 989 901</strong> hoặc email <strong>support@tripticket.com</strong>. Chúng tôi luôn sẵn sàng hỗ trợ.</p>
+                    <a class="cancel-policy__link" href="../feedback/index.html">Gửi phản hồi dịch vụ</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script src="../../shard/layout.js"></script>
+    <script src="./cancel.js"></script>
+</body>
+</html>

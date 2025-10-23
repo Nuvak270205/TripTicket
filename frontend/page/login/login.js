@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const errEmailInvalid = document.getElementById("err_email");
     const errPassEmpty = document.getElementById("errmk");
     const errPassShort = document.getElementById("err_mk");
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     form.addEventListener("submit", function (e) {
-        // e.preventDefault();
+        e.preventDefault();
         [errEmailEmpty, errEmailInvalid, errPassEmpty, errPassShort].forEach(el => el.classList.add("d-none"));
 
         let isValid = true;
@@ -34,10 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (isValid) {
-            console.log("✅ Form hợp lệ. Tiến hành đăng nhập...");
-
-            alert("Đăng nhập thành công (demo)");
-            form.reset();
+            localStorage.setItem("login", true);
+            window.location.href = "../home/index.html";
         }
     });
 

@@ -1,0 +1,372 @@
+:root {
+	--cancel-accent: rgba(34, 139, 34, 0.1);
+	--cancel-border: rgba(15, 23, 42, 0.12);
+}
+
+.cancel {
+	background-color: #f4f6fb;
+}
+
+.cancel section {
+	padding: 72px 0;
+}
+
+.cancel-hero {
+	background: linear-gradient(125deg, rgba(34, 139, 34, 0.18) 0%, rgba(15, 23, 42, 0.12) 100%);
+	color: #0f172a;
+}
+
+.cancel-hero__layout {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 32px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cancel-hero__info {
+	max-width: 600px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.cancel-hero__eyebrow {
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-weight: 600;
+	color: var(--primary-color);
+}
+
+.cancel-hero__highlights {
+	list-style: none;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	margin: 0;
+	padding: 0;
+	color: #1f2937;
+}
+
+.cancel-hero__highlights i {
+	color: var(--primary-color);
+	margin-right: 10px;
+}
+
+.cancel-hero__card {
+	background: #ffffff;
+	border-radius: 20px;
+	padding: 24px;
+	box-shadow: 0 22px 48px rgba(15, 23, 42, 0.22);
+	min-width: 280px;
+	max-width: 320px;
+}
+
+.cancel-hero__card-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+	font-weight: 600;
+	color: #1f2937;
+}
+
+.cancel-hero__card-header .status {
+	padding: 6px 12px;
+	border-radius: 999px;
+	background: rgba(34, 139, 34, 0.14);
+	color: var(--primary-color);
+	font-size: 13px;
+}
+
+.cancel-hero__card-body p {
+	margin-bottom: 10px;
+	color: #4a5568;
+}
+
+.cancel-section__header {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 24px;
+	color: #0f172a;
+}
+
+.cancel-form {
+	background: #ffffff;
+	border-radius: 22px;
+	border: 1px solid var(--cancel-border);
+	box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
+	padding: 24px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 18px;
+	align-items: flex-end;
+}
+
+.cancel-form__group {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.cancel-form__group label {
+	font-weight: 600;
+	color: #0f172a;
+}
+
+.cancel-form__group input,
+.cancel-form__group select,
+.cancel-form__group textarea {
+	padding: 12px 14px;
+	border-radius: 12px;
+	border: 1px solid rgba(148, 163, 184, 0.6);
+	background: #f8fafc;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cancel-form__group input:focus,
+.cancel-form__group select:focus,
+.cancel-form__group textarea:focus {
+	outline: none;
+	border-color: var(--primary-color);
+	box-shadow: 0 0 0 3px rgba(34, 139, 34, 0.18);
+}
+
+.cancel-form__group--submit {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.cancel-form__submit {
+	padding: 14px 22px;
+	border-radius: 14px;
+	border: none;
+	background: var(--primary-color);
+	color: #ffffff;
+	font-weight: 700;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+	width: 100%;
+}
+
+.cancel-form__submit:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 16px 32px rgba(34, 139, 34, 0.22);
+}
+
+.cancel-form__notice {
+	grid-column: 1 / -1;
+	font-size: 14px;
+	font-weight: 600;
+	color: #475569;
+	min-height: 18px;
+}
+
+.cancel-form__notice.is-success {
+	color: #0f9d58;
+}
+
+.cancel-form__notice.is-error {
+	color: #dc2626;
+}
+
+.cancel-result {
+	margin-top: 28px;
+}
+
+.cancel-result__card {
+	background: #ffffff;
+	border-radius: 22px;
+	border: 1px solid var(--cancel-border);
+	box-shadow: 0 18px 38px rgba(15, 23, 42, 0.12);
+	padding: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.cancel-ticket__summary {
+	display: grid;
+	gap: 12px;
+	color: #1f2937;
+}
+
+.cancel-ticket__summary strong {
+	font-size: 18px;
+}
+
+.cancel-ticket__list {
+	display: grid;
+	gap: 12px;
+}
+
+.cancel-ticket__item {
+	border: 1px solid rgba(148, 163, 184, 0.4);
+	border-radius: 16px;
+	padding: 16px;
+	display: grid;
+	gap: 10px;
+	background: #fdfdfd;
+	transition: border-color 0.2s ease;
+}
+
+.cancel-ticket__item:hover {
+	border-color: var(--primary-color);
+}
+
+.cancel-ticket__top {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cancel-ticket__select {
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	font-weight: 600;
+	color: #0f172a;
+}
+
+.cancel-ticket__timeline,
+.cancel-ticket__refund {
+	color: #475569;
+	font-size: 14px;
+}
+
+.cancel-ticket__status {
+	font-size: 13px;
+	padding: 4px 10px;
+	border-radius: 999px;
+	background: rgba(148, 163, 184, 0.18);
+	color: #475569;
+	font-weight: 600;
+}
+
+.status--confirmed {
+	background: rgba(34, 139, 34, 0.12);
+	color: var(--primary-color);
+}
+
+.status--processing {
+	background: rgba(255, 215, 0, 0.18);
+	color: #b7791f;
+}
+
+.status--cancelled {
+	background: rgba(220, 38, 38, 0.15);
+	color: #b91c1c;
+}
+
+.cancel-actions {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 16px;
+	align-items: end;
+}
+
+.cancel-actions__btn {
+	padding: 14px 22px;
+	border-radius: 14px;
+	border: none;
+	background: var(--secondary-color);
+	color: #ffffff;
+	font-weight: 700;
+	cursor: pointer;
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cancel-actions__btn:hover {
+	transform: translateY(-1px);
+	box-shadow: 0 16px 32px rgba(255, 87, 34, 0.22);
+}
+
+.cancel-summary {
+	border-top: 1px dashed rgba(148, 163, 184, 0.6);
+	padding-top: 18px;
+	display: grid;
+	gap: 10px;
+	font-weight: 600;
+	color: #1f2937;
+}
+
+.cancel-summary__success {
+	color: #0f9d58;
+}
+
+.cancel-summary__error {
+	color: #dc2626;
+}
+
+.cancel-policy {
+	background: #ffffff;
+}
+
+.cancel-policy__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 32px;
+	align-items: start;
+}
+
+.cancel-policy__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	gap: 12px;
+	color: #1f2937;
+}
+
+.cancel-policy__note {
+	background: var(--cancel-accent);
+	border-radius: 20px;
+	padding: 24px;
+	display: grid;
+	gap: 12px;
+	color: #1f2937;
+}
+
+.cancel-policy__link {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 18px;
+	border-radius: 14px;
+	background: var(--primary-color);
+	color: #ffffff;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.cancel-policy__link:hover {
+	opacity: 0.92;
+}
+
+@media (max-width: 768px) {
+	.cancel section {
+		padding: 56px 0;
+	}
+
+	.cancel-form {
+		grid-template-columns: 1fr;
+	}
+
+	.cancel-form__group--submit {
+		justify-content: stretch;
+	}
+
+	.cancel-hero__card {
+		width: 100%;
+	}
+}
+
+@media (max-width: 520px) {
+	.cancel-ticket__top {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

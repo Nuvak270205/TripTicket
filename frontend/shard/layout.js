@@ -14,7 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         <div class="header__menu">
                             <nav class="nav">
                                 <ul class="nav__list">
-                                    <li class="nav__item"><a href="../home/index.html" class="nav__link ${activePage === 'home' ? 'active' : ''}">Trang chủ</a></li>
+                                    <li class="nav__item">
+                                        <a href="../home/index.html" class="nav__link ${activePage === 'home' ? 'active' : ''}">
+                                            <i class="fa-solid fa-house"></i>
+                                            Trang chủ
+                                        </a>
+                                    </li>
                                     <li class="nav__item">
                                         <a href="../busoperator/index.html" class="nav__link ${activePage === 'busoperator' ? 'active' : ''}">
                                             <i class="fa-solid fa-bus"></i>
@@ -28,6 +33,12 @@ document.addEventListener("DOMContentLoaded", function () {
                                         </a>
                                     </li>
                                     <li class="nav__item">
+                                        <a href="../contact/index.html" class="nav__link ${activePage === 'contact' ? 'active' : ''}">
+                                            <i class="fa-solid fa-phone"></i>
+                                            Hỗ trợ
+                                        </a>
+                                    </li>
+                                    <li class="nav__item">
                                         <a href="../feedback/index.html" class="nav__link ${activePage === 'feedback' ? 'active' : ''}">
                                             <i class="fa-solid fa-comment-dots"></i>
                                             Feedback
@@ -36,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                     <li class="nav__item info__link">
                                         <div class="nav__link">
                                             <div class="info">
-                                                <img src="" alt="" class="info__image">
+                                                <img src="https://res.cloudinary.com/dpnza0kof/image/upload/v1761197706/vtdgumwes11xmnsxgt1u.jpg" alt="" class="info__image">
                                             </div>
                                             <a href="../login/index.html" class="info__button ${activePage === 'login' ? 'active' : ''}">
                                              Đăng nhập
@@ -65,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
                                                 </li>
                                                 <li class="info__driver"></li>
                                                 <li class="info__item">
-                                                    <a href="../logout.html" class="info__link">
+                                                    <a class="logout" href="" class="info__link">
                                                         <i class="fa-solid fa-right-from-bracket"></i>
                                                         Đăng xuất
                                                     </a>
@@ -84,7 +95,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 const menuToggle = document.querySelector(".info__link .info");
                 const dropdownMenu = document.querySelector(".info__downdrop");
+                const infoBtn = document.querySelector(".info__button");
+                const infoImage = document.querySelector(".nav__link .info");
+                const logoutBtn = document.querySelector(".logout");
                 let timeOutInfo = null;
+                let LocalStorageUser = localStorage.getItem("login") || false;
+                if (LocalStorageUser === "true") {
+                    infoBtn.style.display = "none";
+                    infoImage.style.display = "block";
+                }else{
+                    infoBtn.style.display = "inline-block";
+                    infoImage.style.display = "none";
+                }
+                logoutBtn.addEventListener("click", function (e) {
+                    localStorage.setItem("login", false);
+                    window.location.href = "../home/index.html";
+                });
 
                 menuToggle.addEventListener("mouseover", function () {
                     clearTimeout(timeOutInfo);
