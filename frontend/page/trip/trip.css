@@ -225,3 +225,31 @@
     left: 50%;
     transform: translateX(-50%);
 }
+
+.chair--waiting{
+    background-color: #FFF59D;
+    border: 2px solid #FFEB3B;
+    pointer-events: none;
+}
+.chair--waiting::after{
+    border: 2px solid #FFEB3B;
+}
+.chair--waiting::before{
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f017";
+    font-size: 8px;
+    color: #FFF59D;
+    padding: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #FFEB3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}

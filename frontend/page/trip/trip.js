@@ -125,6 +125,13 @@ document.addEventListener('DOMContentLoaded', function() {
                                         <div class="note__text-title">Ghế đang chọn</div>
                                     </div>
                                 </div>
+                                <!-- Currently Selecting -->
+                                <div class="note__list-item">
+                                    <div class="chair chair--waiting"></div>
+                                    <div class="note-text">
+                                        <div class="note__text-title">Ghế chờ</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -201,17 +208,37 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>`;
             }
             function renderChairNormal(soGhe, giaVe, status) {
-                const chairClass = status === 'booked' ? 'chair--selected' : 'chair--normal';
+                let chairClass = null;
+                if (status === 'booked') {
+                    chairClass = 'chair--selected';
+                } else if (status === 'waiting') {
+                    chairClass = 'chair--waiting';
+                }else{
+                    chairClass = 'chair--normal';
+                }
                 return `
                 <div class="bus__row-item">
                     <div class="chair ${chairClass}" data-key="${soGhe}" data-price="${giaVe}" data-status="${status}"></div>
                 </div>`;
             }
             function renderChairVip(soGhe, giaVe, status) {
-                const chairClass = status === 'booked' ? 'chair--selected' : 'chair--vip';
+                let chairClass = null;
+                if (status === 'booked') {
+                    chairClass = 'chair--selected';
+                } else if (status === 'waiting') {
+                    chairClass = 'chair--waiting';
+                }else{
+                    chairClass = 'chair--vip';
+                }
                 return `
                 <div class="bus__row-item">
                     <div class="chair ${chairClass}" data-key="${soGhe}" data-price="${giaVe}" data-status="${status}"></div>
+                </div>`;
+            }
+            function renderChairWaiting(soGhe, giaVe) {
+                return `
+                <div class="bus__row-item">
+                    <div class="chair chair--waiting" data-key="${soGhe}" data-price="${giaVe}"></div>
                 </div>`;
             }
             function renderChairNone() {
@@ -229,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     tongSo: 11,
                     daDat: 2,
                     ghe: [
-                        { soGhe: "A1", status: "available" },
+                        { soGhe: "A1", status: "waiting" },
                         { soGhe: "A2", status: "available" },
                         { soGhe: "A3", status: "available" },
                         { soGhe: "B1", status: "booked" },
@@ -237,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         { soGhe: "B3", status: "available" },
                         { soGhe: "C1", status: "available" },
                         { soGhe: "C2", status: "booked" },
-                        { soGhe: "C3", status: "available" },
+                        { soGhe: "C3", status: "waiting" },
                         { soGhe: "D1", status: "available" },
                         { soGhe: "D2", status: "available" }
                     ]
@@ -248,8 +275,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     tongSo: 4,
                     daDat: 1,
                     ghe: [
-                        { soGhe: "E1", status: "available" },
-                        { soGhe: "E2", status: "available" },
+                        { soGhe: "E1", status: "waiting" },
+                        { soGhe: "E2", status: "waiting" },
                         { soGhe: "E3", status: "booked" },
                         { soGhe: "E4", status: "available" }
                     ]
@@ -268,7 +295,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         { soGhe: "A3", status: "available" },
                         { soGhe: "B1", status: "available" },
                         { soGhe: "B2", status: "available" },
-                        { soGhe: "B3", status: "available" },
+                        { soGhe: "B3", status: "waiting" },
                         { soGhe: "B4", status: "available" },
                         { soGhe: "C1", status: "booked" },
                         { soGhe: "C2", status: "available" },
@@ -301,12 +328,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         { soGhe: "A1", status: "available" },
                         { soGhe: "B1", status: "available" },
                         { soGhe: "B2", status: "booked" },
-                        { soGhe: "B3", status: "available" },
-                        { soGhe: "C1", status: "available" },
-                        { soGhe: "C2", status: "available" },
-                        { soGhe: "C3", status: "available" },
-                        { soGhe: "D1", status: "available" },
-                        { soGhe: "D2", status: "available" },
+                        { soGhe: "B3", status: "waiting" },
+                        { soGhe: "C1", status: "waiting" },
+                        { soGhe: "C2", status: "waiting" },
+                        { soGhe: "C3", status: "waiting" },
+                        { soGhe: "D1", status: "waiting" },
+                        { soGhe: "D2", status: "waiting" },
                         { soGhe: "D3", status: "booked" },
                         { soGhe: "E1", status: "available" },
                         { soGhe: "E2", status: "available" },
@@ -639,7 +666,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             let urlParams = new URLSearchParams(window.location.search);
-            let type = urlParams.get('type') || '15';
+            let type = urlParams.get('type') || '16';
 
             function getDataByType(type) {
                 switch (type) {

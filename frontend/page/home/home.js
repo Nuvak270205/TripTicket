@@ -57,6 +57,12 @@ document.addEventListener("DOMContentLoaded", function() {
             const locationItemTo = document.querySelectorAll(".downdrop__to .location-item");
             const locationItemGo = document.querySelectorAll(".downdrop__go .location-item");
             const icon = document.querySelector(".content__icon");
+            const btnSearch = document.querySelector(".btn-search");
+
+            // xu ly su kien click nut search
+            btnSearch.addEventListener("click", function() {
+                location.href = `../listTrip/index.html?from=${encodeURIComponent(inputgo.value)}&to=${encodeURIComponent(inputto.value)}&date=${encodeURIComponent(document.getElementById("date").value)}`;
+            });
 
             // hien thi dropdown khi focus vao input
             inputgo.addEventListener("focus", function() {
