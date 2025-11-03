@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', function() {
                                 <div class="note__list-item">
                                     <div class="chair chair--waiting"></div>
                                     <div class="note-text">
-                                        <div class="note__text-title">Ghế chờ</div>
+                                        <div class="note__text-title">ghế tạm giữ</div>
                                     </div>
                                 </div>
                             </div>
